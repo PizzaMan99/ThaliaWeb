@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+	<title>Login Page</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="hero">
+		<div class="form-box">
+			<div class="button-box">
+				<div id="btn"></div>
+				<button type="button" class="toggle-btn" onclick="login()">Login</button>
+				<button type="button" class="toggle-btn" onclick="register()">Register</button>
+			</div>
+			<div class="social-icons">
+			<img src="images/fb.png">
+			<img src="images/tw.png">
+			<img src="images/gp.png">
+		</div>
+		<form id="login" class="input-group">
+			<input type="text" class="input-field" placeholder="User ID" name="userId" autocomplete="off" required>
+			<input type="password" class="input-field" placeholder="Enter Password" name="passwrd" required>
+			<input type="checkbox" class="chech-box"><span>Remember Password</span>
+			<button type="submit" class="submit-btn" onclick="check(this.form)">Login</button>
+		</form>
+
+		<form id="register" class="input-group">
+			<input type="text" class="input-field" placeholder="User ID" name="euserid" autocomplete="off" required>
+			<input type="email" class="input-field" placeholder="Email ID" name="emailId" required>
+			<input type="password" class="input-field" placeholder="Enter Password" name="epasswrd" required>
+			<input type="checkbox" class="chech-box" required><span>I agree to the terms & conditions</span>
+			<button type="submit" class="submit-btn" onclick="check(this.form2)">Register</button>
+		</form>
+		</div>
+	</div>
+
+	<script>
+		var x = document.getElementById("login");
+		var y = document.getElementById("register");
+		var z = document.getElementById("btn");
+		var user = ['Dylan', 'Thalia', 'Donald'];
+		var password = ['Liverpool86', 'Lilly123', 'Password01'];
+		var email = ['2610dylan@gmail.com', 'tEvgeniou@gmail.com', 'livboy@gmail.com'];
+		var iloop;
+		var hit = false;
+		//var ilength = 0;
+
+		function register(){
+			x.style.left = "-400px";
+			y.style.left = "50px";
+			z.style.left = "110px";
+		}
+
+		function login(){
+			x.style.left = "50px";
+			y.style.left = "450px";
+			z.style.left = "0"; 
+		}
+
+		function check(form){
+			for (iloop = 0; iloop <= user.length; iloop++){
+
+			if(form.userId.value == user[iloop] && form.passwrd.value == password[iloop]){
+				window.open('home.html');
+				hit == true;
+			}
+		}
+
+		if(hit == false){
+			alert("Incorrect Username or Password")
+		}
+	}
+
+	/*ilength = user.length + 1;
+	iloop = 0;
+
+		function check(form2){
+			while (iloop <= ilength) {
+				if (iloop == ilength) {
+					user[iloop] = form2.euserid.value;
+					password[iloop] = form2.epasswrd.value;
+					email[iloop] = form2.emailId.value;
+					hit == true;
+					alert("details have been captured Welcome")
+				} 
+				iloop++
+			}
+
+			if (hit == false) {
+				alert("Info was not collected")
+			}
+		}*/
+
+	</script>
+</body>
+</html>
