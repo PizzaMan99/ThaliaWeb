@@ -1,0 +1,29 @@
+.heading {
+	position: relative;
+    width: 80%;
+    height: auto;
+    margin: 10% auto;
+    /*opacity: 0;*/
+    padding: 5px;
+    overflow: hidden;
+}
+
+.text {
+	font-size: 42px;
+	text-align: center;
+	color: white;
+	opacity: 0.8;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.subtext {
+	font-size: 24px;
+	text-align: center;
+	font-weight: normal;
+	margin: 5px;
+	color: white;
+	opacity: 0.4;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
